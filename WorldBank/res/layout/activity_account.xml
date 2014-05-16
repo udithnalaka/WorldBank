@@ -1,0 +1,120 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"       
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".ManageAccountsActivity" >
+    
+     <TextView
+        android:id="@+id/textAccountTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_alignParentTop="true"
+      	android:layout_centerHorizontal="true"
+        android:text="@string/hello_message"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+     
+      <TextView
+      android:id="@+id/textSelectAccounts"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentLeft="true"
+      android:layout_below="@+id/textAccountTitle"
+      android:layout_marginTop="50dp"
+      android:text="@string/selectAccounts"
+      android:textAppearance="?android:attr/textAppearanceMedium" />
+      
+      <Spinner
+        android:id="@+id/spinnerAccounts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"        
+        android:layout_alignBottom="@+id/textSelectAccounts"
+        android:layout_toRightOf="@+id/textSelectAccounts"        
+        android:prompt="@string/selectAccounts" />
+      
+      <!-- account balanace -->
+       <TextView
+      android:id="@+id/textAccountBalance"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentLeft="true"
+      android:layout_below="@+id/spinnerAccounts"
+      android:layout_marginTop="50dp"
+      android:text="@string/textAcctBal"
+      android:textAppearance="?android:attr/textAppearanceMedium" />
+       
+        <TextView
+      android:id="@+id/textViewAccountBalance"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content" 
+      android:layout_marginLeft="32dp"     
+      android:layout_alignBottom="@+id/textAccountBalance"
+      android:layout_toRightOf="@+id/textAccountBalance" />
+  
+        <!-- account interest earned/deducted -->
+         <TextView
+      android:id="@+id/textAccountInterest"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentLeft="true"
+      android:layout_below="@+id/textAccountBalance"
+      android:layout_marginTop="20dp"
+      android:text="@string/textAcctInt"
+      android:textAppearance="?android:attr/textAppearanceMedium" />
+       
+        <TextView
+      android:id="@+id/textViewAccountInterest"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content" 
+      android:layout_marginLeft="32dp"     
+      android:layout_alignBottom="@+id/textAccountInterest"
+      android:layout_toRightOf="@+id/textAccountInterest" />
+        
+        <!-- Transfer Money -->
+     <TextView
+      android:id="@+id/textMoneyTransfer"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerHorizontal="true"
+      android:layout_below="@+id/textViewAccountInterest"
+      android:layout_marginTop="50dp"
+      android:text="@string/viewMoneyTransfer"
+      android:textAppearance="?android:attr/textAppearanceMedium" />
+     
+     <Button
+      android:id="@+id/buttonMoneyTransfer"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/textMoneyTransfer"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="10dp"
+      android:onClick="transferMoney"
+      android:text="@string/btnNavigateToAction" />
+     
+      <!-- Pay Bills -->
+     <TextView
+      android:id="@+id/textBillPay"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerHorizontal="true"
+      android:layout_below="@+id/buttonMoneyTransfer"
+      android:layout_marginTop="20dp"
+      android:text="@string/viewBillPayment"
+      android:textAppearance="?android:attr/textAppearanceMedium" />
+     
+     <Button
+      android:id="@+id/buttonBillPay"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/textBillPay"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="10dp"
+      android:onClick="payBills"
+      android:text="@string/btnNavigateToAction" />
+     
+
+</RelativeLayout>

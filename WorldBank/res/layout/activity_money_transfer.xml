@@ -1,0 +1,157 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MoneyTransferActivity" >
+ 
+    
+     <TextView
+        android:id="@+id/textTitleAccountTransfer"        
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentTop="true"
+      	android:layout_centerHorizontal="true"
+        android:text="@string/title__money_transfer"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+     
+      <!-- Account From -->
+    <TextView
+      android:id="@+id/textAccountName"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentLeft="true"
+      android:layout_below="@+id/textTitleAccountTransfer"
+      android:layout_marginTop="20dp"
+      android:text="@string/account_from"
+      android:textAppearance="?android:attr/textAppearanceMedium" />
+
+   <EditText
+      android:id="@+id/viewAccountName"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignBottom="@+id/textAccountName"
+      android:layout_marginLeft="32dp"
+      android:layout_toRightOf="@+id/textAccountName"
+      android:ems="10"       
+      android:editable="false" />
+   
+    <!-- Account Balanace -->
+    <TextView
+      android:id="@+id/textAccountBalance"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentLeft="true"
+      android:layout_below="@+id/textAccountName"
+      android:layout_marginTop="15dp"
+      android:text="@string/textAcctBal"
+      android:textAppearance="?android:attr/textAppearanceMedium" />
+
+   <EditText
+      android:id="@+id/viewAccountBalance"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignBottom="@+id/textAccountBalance"
+      android:layout_marginLeft="20dp"
+      android:layout_toRightOf="@+id/textAccountBalance"
+      android:ems="10"       
+      android:editable="false" />
+      
+    <!-- Account To -->
+    <TextView
+      android:id="@+id/textAccountTo"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentLeft="true"
+      android:layout_below="@+id/textAccountBalance"
+      android:layout_marginTop="20dp"
+      android:text="@string/account_to"
+      android:textAppearance="?android:attr/textAppearanceMedium" />
+    
+     <Spinner
+        android:id="@id/spinnerAccounts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"        
+        android:layout_alignBottom="@+id/textAccountTo"
+        android:layout_toRightOf="@+id/textAccountTo"        
+        android:layout_marginLeft="32dp"
+        android:prompt="@string/selectAccounts" />
+
+  <!--  <EditText
+      android:id="@+id/viewAccountTo"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignBottom="@+id/textAccountTo"
+      android:layout_marginLeft="32dp"
+      android:layout_toRightOf="@+id/textAccountTo"
+      android:ems="10"       
+      android:inputType="text"  />
+    -->
+    <!-- Transfer Amount -->
+    <TextView
+      android:id="@+id/textTransferAmount"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentLeft="true"
+      android:layout_below="@+id/textAccountTo"
+      android:layout_marginTop="20dp"
+      android:text="@string/transferAmount"
+      android:textAppearance="?android:attr/textAppearanceMedium" />
+
+   <EditText
+      android:id="@+id/editTransferAmount"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignBottom="@+id/textTransferAmount"
+      android:layout_marginLeft="10dp"
+      android:layout_toRightOf="@+id/textTransferAmount"
+      android:ems="10"
+      android:inputType="numberDecimal"  />
+   
+   <Button
+       android:id="@+id/btnTransferMoney"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_below="@+id/editTransferAmount"
+       android:layout_marginTop="20dp"
+       android:layout_centerHorizontal="true"       
+       android:text="@string/transferMoney"
+       android:onClick="transferMoney" />
+   
+   <TextView
+        android:id="@+id/transferMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+         android:layout_below="@+id/btnTransferMoney"
+      	android:layout_centerHorizontal="true"
+      	android:textColor="@color/success_message"
+        android:text="" />
+   
+    <TextView 
+        android:id="@+id/notifyMoneyReceiver"       
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/transferMsg"
+      	android:layout_centerHorizontal="true" 
+      	android:visibility="invisible"     	
+        android:text="@string/notifyMoneyReceiver" />
+       
+     <Button
+       android:id="@+id/btnSendSMS"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"    
+       android:layout_marginTop="0dp"    
+       android:layout_below="@+id/notifyMoneyReceiver" 
+       android:layout_centerHorizontal="true"               
+       android:text="@string/sendSMS"
+       android:visibility="invisible"   
+       android:onClick="notifyToAccountHolder" />
+  
+
+</RelativeLayout>

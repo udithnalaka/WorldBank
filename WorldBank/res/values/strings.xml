@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">WorldBank</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_message">Welcome to World Bank</string>
+    <string name="addItem">Add ToDo item</string>
+    <string name="removeItem">Remove item</string>
+    <string name="cancelItem">Cancel item</string>
+    <string name="title_login">Login to World Bank</string>
+    <string name="username">Username:</string>
+    <string name="password">Password:</string>
+    <string name="login">Login</string>
+    <string name="attempts">Attempts Left: </string>
+    <string name="viewAccounts">View Listed Accounts</string>
+    <string name="accounts">Accounts</string>
+    <string name="viewTransactions">View Transaction History</string>
+    <string name="transactions">Transactions</string>
+    <string name="myProfile">View Customer Profile</string>
+    <string name="profile">Profile</string>
+    <string name="selectAccounts">Select an Account</string>
+    <string name="textAcctBal">Account Balance :</string>
+    <string name="textAcctInt">Account Interest :</string>
+    <string name="viewMoneyTransfer"> Transfer Money</string>
+    <string name="btnNavigateToAction">Select</string>
+    <string name="viewBillPayment"> Pay your Bills </string>
+    <string name="title__money_transfer">Money Trasnfer</string>
+    <string name="account_from">Account From :</string>
+    <string name="account_to">Account To :</string>
+    <string name="transferAmount">Transfer Amount :</string>
+    <string name="transferMoney">Transfer Now</string>
+    <string name="title_activity_transfer_notify">WorldBank</string>
+     <string name="notifyMoneyReceiver">Notify Receiver on Money Transfer?</string>
+    <string name="sendSMS">Send SMS</string>
+    <string name="sendSMSTitle">Notify Sender via SMS</string>
+    <string name="notifyTo">To :</string>
+
+</resources>

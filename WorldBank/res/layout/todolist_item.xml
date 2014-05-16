@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ud.mobile.worldbank.TodoListItemView 
+    xmlns:android="http://schemas.android.com/apk/res/android"    
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"    
+    android:padding="10dp"
+    android:scrollbars="vertical"
+    android:textColor="@color/notepad_text"
+    android:fadingEdge="vertical"
+    />
+
+

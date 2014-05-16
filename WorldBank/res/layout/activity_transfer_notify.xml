@@ -1,0 +1,69 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".TransferNotifyActivity" >
+
+    <TextView
+        android:id="@+id/title_notify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentTop="true"
+      	android:layout_centerHorizontal="true"      	
+        android:text="@string/sendSMSTitle" />
+    
+    
+	 <Button
+      android:id="@+id/linkPickSender"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentLeft="true"
+      android:layout_below="@+id/title_notify"
+      android:layout_marginTop="30dp"
+      android:text="@string/notifyTo"
+      android:background="@color/notepad_text" 
+      android:onClick="pickSenderFromContactList"     
+      android:textAppearance="?android:attr/textAppearanceMedium" />
+	 
+	  <EditText
+	      android:id="@+id/editContactNum"
+	      android:layout_width="wrap_content"
+	      android:layout_height="wrap_content"
+	      android:layout_alignBottom="@+id/linkPickSender"
+	      android:layout_marginLeft="32dp"
+	      android:layout_toRightOf="@+id/linkPickSender"
+	      android:ems="10" 
+	      android:inputType="text" >
+	      <requestFocus />
+  	  </EditText>
+  	  
+  	  <EditText
+  	    android:id="@+id/editMsgBody"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/customborder"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@+id/editContactNum"
+        android:gravity="top"        
+        android:lines="5"       
+        android:inputType="textMultiLine" />
+  	  
+  	  <Button
+      android:id="@+id/sendSMS"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"     
+      android:layout_below="@+id/editMsgBody"
+      android:layout_marginTop="20dp"
+      android:text="@string/sendSMS"      
+      android:onClick="notifyBySMS"  
+      android:layout_centerHorizontal="true"   
+      android:textAppearance="?android:attr/textAppearanceMedium" />
+    
+</RelativeLayout>
